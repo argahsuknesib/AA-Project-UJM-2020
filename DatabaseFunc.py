@@ -20,3 +20,4 @@ def protein_database_parser(counter):
             counter -= 1
     file.close()
     return database
+

@@ -113,10 +113,11 @@ def editDistDp(str1, str2):
     secondSequence = secondSequence[::-1]   
     return (dp[len(str1)][len(str2)],firstSequence,secondSequence)
     
-#the main function is used here plus updates to manually input the strings at run time
 if __name__ == "__main__":
-    str1="INTENTION"
-    str2="EXECUTION"
+    str1 = "MGKKWMIIMVLLFSLCSIHSIAAEPVKEVEKTVVLSYQELLGREYKMISPFGGNKITLGFDIRNRIYGYTGLNRFWGQAQLENGKLKVGEVFTTEHKGVQEQRILQVKYLTLLKDSDSIYFEGENLVLSTPFQEKLIFQRIK "
+
+    str2 = "MRKKIMILMVLMFSLLSLPSMAAQPIKEVEKTIVLAYQDLVGKEYKMIGPFGGNKITLGFDVQNRIYGYTGLNRFWGQAEIENGKVKVGEVFTTENKGVQEQRILQVKYLTILKDVESIHFEGENLVLTTPFQEKLVFQPIL "
+
     print('Edit Distance',editDistDp(str1, str2))
    
    

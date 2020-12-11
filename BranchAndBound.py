@@ -72,7 +72,7 @@ def branchAndBound(string1, string2, cost=0, bound=0):
         insertion = 1000000
     if bound >= weightw:
         if (string1[-1] != string2[-1]):
-            substitution,ac1,ac2 = branchAndBound(string1[:-1], string2[:-1], cost + 1, bound)
+            substitution,ac1,ac2 = branchAndBound(string1[:-1], string2[:-1], cost + 1, bound) # substitution
             substitution += 1
         else:
             substitution,ac1,ac2 = branchAndBound(string1[:-1], string2[:-1], cost, bound)
@@ -98,8 +98,14 @@ if __name__ == "__main__":
     print('***********************************')
     print('Kushagra Singh Bisen M1 CPS2')
     print("Branch and bound for edit distance problem.")
-    string1 = string_generator(6)
-    string2 = string_generator(8)
+    string1 = string_generator(8)
+    string2 = string_generator(13)
+
+    # string1 = "MSIVRRSNVFDPFADLWADPFDTFRSIVPAISGGGSETAAFANARMDWKETPEAHVFKADLPGVKKEEVKVEVEDGNVLVVSGERTKEKEDKNDKWHRVERSSGKFVRRFRLLEDAKVEEVKAGLENGVLTVTVPKAEVKKPEVKAIQISG"
+    # string2 = "MWASAKIGGNYMKQTVRPTTLLESLFGDDFMNNAGYGTGVDIYREEGSYFVEIEMPGFEKEDIDIEFSGDILSIQATRRESEEKDEKNYFYRSRNQKNIKRQIRFAEVDANAIDASYQQGVLQITLPTKVEEHNSSKIRVQ"
+
+    print("first string is ", string1)
+    print("second string is ", string2)
     start_time=time()
     result, a1, a2  = branchAndBound(string1,string2,0,max(len(string1),len(string2)))
     print(a1,'\n',a2)
